@@ -4,8 +4,9 @@ var search=document.getElementById('search');
 search.addEventListener("click",()=>{
   var find=document.getElementById('find').value;
   console.log(find);
+  var mykey = config.MY_KEY;
 
-    const url=`https://api.openweathermap.org/data/2.5/weather?q=${find}&units=metric&appid=03b2d3015ebcba59c0eea874c85ca560`;
+    const url=`https://api.openweathermap.org/data/2.5/weather?q=${find}&units=metric&appid=`+mykey;
 fetch(url)
 .then((response)=>{
     return response.json();
